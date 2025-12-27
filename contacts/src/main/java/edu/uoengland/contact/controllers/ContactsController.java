@@ -21,7 +21,7 @@ import edu.uoengland.contact.service.ContactService;
 @RestController
 @RequestMapping("/contact")
 @CrossOrigin("*")
-public class ContactControllers {
+public class ContactsController {
 
 	@Autowired
 	private ContactService contactService;
@@ -31,7 +31,7 @@ public class ContactControllers {
 		
 		contactService.saveAContact(contactDetailsDTO);
 		
-		return "The message has been successfully saved.";
+		return "The contact or message has been successfully saved.";
 	}
 	
 	@GetMapping
